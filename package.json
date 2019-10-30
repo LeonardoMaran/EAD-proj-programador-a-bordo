@@ -1,0 +1,21 @@
+{
+  "name": "ead",
+  "version": "0.0.1",
+  "description": "API da plataforma de ensino a distancia",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "hapi": "^18.1.0",
+    "save": "^2.4.0"
+  }
+}
