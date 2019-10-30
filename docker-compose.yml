@@ -1,0 +1,8 @@
+version: "3"
+services:
+mongo:
+  image: mongo
+   restart: "älways"
+   volumes: 
+      - ./.dbcache/mongo/data:/data/db
+   ports:

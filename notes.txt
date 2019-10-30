@@ -1,3 +1,77 @@
 nvm use 10.15.3
 
 npm init
+
+eslint usage
+
+./node/node_modules/eslint/bin/eslint.js --init
+
+to chech sintax and find problems
+commonJS - para node exportacao de modulos
+Json
+
+eslint airbnb
+
+npx install-peerdeps --dev eslint-config-airbnb-base
+
+Add "extends": "airbnb-base" to your .eslintrc.
+
+
+Video 6
+
+Mongo ira salvar
+
+usuarios
+cursos
+categorias
+plataforma
+
+mysql
+
+planos
+matriculas
+pagamentos
+
+3 tabelas principais que ira gerar outras tabelas
+
+neste caso os planos sera definido quantos meses sao,os precos
+
+matriculas
+
+dados geerados de quando comecou quando e que termina
+
+pagamento, dados do pagamento 
+gateway de pagamento, se foi parcelado, valor total 
+status de pagamento, se esta pendente
+se ja foi pago, se e boleto, cartao
+
+matriculas
+
+qual foi o pagamento, quais sao os planos, qual e o curso, qual e o aluno,
+quando termina  
+
+
+O mongo tem os dados do usuario que permite reunir tuo em um unico documento
+ja no mysql teria que fazer uma query, que e muita informacao especifica do
+usuario eu nao precisaria por isto em outra tabela
+
+na tabela tera controle de acessos
+
+o administrador tera acesso privielgiado
+
+tem o professor que poderacriar alguns cursos,editar, nao podera deletar cursos
+nao podera deletar usuarios ou criar usuarios
+
+na api tera um sistema de controle de acesso
+
+Video 7 - docker
+
+vou criar na raiz o docker composer 
+
+docker-compose.yml
+
+
+
+
+
+
