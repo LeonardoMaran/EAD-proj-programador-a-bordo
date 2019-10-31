@@ -70,6 +70,49 @@ vou criar na raiz o docker composer
 
 docker-compose.yml
 
+docker hub 
+
+imagem oficial node 
+
+versao slim, menos pesada, o container fica menor 
+
+duas variraveis nescesarias do mongo qaundo executa o docker
+
+MONGO_INITDB_ROOT_USERNAME: root
+MONGO_INITDB_ROOT_PASSWORD: example
+
+porque esta variaveis sao nescessarias
+
+quando voce acessar o mongo pela primeira  vez ele vai criar um 
+usuario so que ele so vai ter acesso ao banco de dados admin que e o banco 
+ por padrao, depois eu preciso ir manualmente no banco para criar as permissoes 
+ que o usuario que vai ter permissoes que vai ser o banco que o usuario vai criar
+que vai ser o banco da plataforma. agente vai criar um usuario proprio para o nosso
+banco  de dados que e por questao de seguranca, que por exemplo o usuario so vai ter
+permissao de leitura  escrita, ele nao vai ter permissao para apagar um banco, se um hacker 
+um usuario consegue fazer uma operacao qeu nao deveria, tentar apagar o nosso banco de dados 
+ele nao vai conseguir porque o usuario que agente criou no banco de daods na tem esta permissao
+ de apagar banco de dados, os banco de dados tem estas questes de usuarios que tem permissoes para fazer 
+ operacoes, entao nos vamos cruar um usuario que tem permissoes restritas para que um  uuario mal 
+ intencionado tnete faazer uma operacao perigosa como deletar o banco como eu falei ele nao vai conseguir
+ que nao tem esta permissao  
+
+   docker-compose up -d   
+
+   executei o docker compose, ele startou os dois containers
+
+   video 8 
+
+   rodar 
+
+   docker-compose up -d
+
+   docker ps
+
+   
+
+
+
 
 
 

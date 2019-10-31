@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "dev": "nodemon src/index.js",
-    "eslint": "eslint ./src/**/*.js"
+    "eslint": "eslint ./src/**/*.js",
+    "start": "nodemon src/index"
   },
-
-  "repository":{
+  "repository": {
     "type": "git",
-     "url": "https://github.com/LeonardoMaran/EAD-proj-programador-a-bordo.git"
+    "url": "https://github.com/LeonardoMaran/EAD-proj-programador-a-bordo.git"
   },
   "author": "",
   "license": "MIT",
