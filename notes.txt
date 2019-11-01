@@ -109,7 +109,97 @@ ele nao vai conseguir porque o usuario que agente criou no banco de daods na tem
 
    docker ps
 
-   
+  aqui no container do mongo agente inicializa com o usuario root do banco  admin
+  e o unico usuario qu tem no mongo neste momento, o username e root e a senha e example
+  porem agente nao consegue usar este uuario que agente vai criar para a nossa aplicacao la no mongo
+  para isso agente precisa  criar um usuario proprio para o nosso banco de dados, eu vou criar isto aqui manualmente
+  no terminal para ficar mais interessante, eu vou acessar ete container do mongo 
+
+  para acessar o termnal do mongo, copia o idd
+
+   docker exec -it  82ff63793185 /bin/bash
+
+   eu estou agora dentro do container do mongo, vou digitar ls
+
+   agora eu vou digitar no terminal
+
+   mongo -u root -p
+
+   senha vai ser example
+
+   agora estou dentro do meu mongo
+
+   se eu dar um 
+
+   show database
+
+   eu tenho um banco admin, config e local
+
+   para eu criar um banco no mongo na verdade e muito simples basta eu mandar usar ele e muito simples 
+   basta eu usar ele, o nome do banco e eadapi
+
+   use eadapi
+
+   ja estou dentro dele e agora eu vou criar um usuario que vai ter permissao de escrita
+   e leitura deste banco de dados, nao e uma permissao muito permitiva. Eu vou criar um proprio 
+   comado do mongo, eu vou criar um usuario especifico deste banco de dados,
+
+   db.createUser(
+     {
+     user:"ead_api_user", 
+     pwd:"ead_api_user",
+     roles:["readWrite"]
+   }
+   );  
+
+roles permissoes
+
+se eu digitar agora 
+
+show users
+
+, ele vai agora aparecer aqui 
+
+o id dele, o usuario, e tem a role de escrita e leitura
+
+agora que eu criei vou sair deste banco
+
+exit
+
+estou aqui no meu codigo e no meu index nao tem nada de especial, estou startando
+o server, vamos ver se ele esta respondendo aqui certo, vou coloccar aqui localhost
+3000,  
+
+docker logs -f 82ff63793185
+
+aqui e o log para ver o que esta acontecnedo
+
+aqui e o host precisa ser 0.0.0.0
+
+ok, printou o hello world, esta rodando 
+
+preciso colocar os dados de usuario e senha em variaveis de ambientes 
+para quando a aplicacao estiver em producao. Entao cada ambiente na maquina tem
+suas proprias variaveis, uma senha na minha  maquina e um, e em producao e outra
+entao ele precisa pegar. Para eu fazer isto local aqui na maquina, eu vou usar um cara chamado
+dot.env 
+
+dotenv-safe - npm 
+
+qu atraves deste modulo node ele carrega para mim as variaveis de ambiente dentro do meu projeto
+
+vou instalar o mongoose
+
+npm install --save mongoose
+
+
+
+
+
+
+
+
+
 
 
 
