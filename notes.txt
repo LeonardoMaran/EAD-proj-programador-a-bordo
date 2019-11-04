@@ -192,6 +192,8 @@ vou instalar o mongoose
 
 npm install --save mongoose
 
+Video 9
+
 
 
 

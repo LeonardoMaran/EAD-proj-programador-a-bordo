@@ -1,15 +1,13 @@
 require('dotenv-safe').config();
-require('./services/mongo.service');
 const server = require('./server');
+const routes = require('./routes');
+
+require('./services/mongo.service');
+
 
 const init = async () => {
-  
+  server.route(routes);
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: () => 'Hello World!',
-  });
 
   await server.start();
   console.log('Server running on %s', server.info.uri);
@@ -23,4 +21,3 @@ process.on('unhandledRejection', (err) => {
 init();
 
 
-//Aula7 4:31
